@@ -77,10 +77,15 @@ done
 Upload to the Michigan imputation server https://imputationserver.sph.umich.edu/
 
 These are the settings I have used but you can also select other reference panels etc.
+
 Ref panel: HRC r1.1 2016
+
 rsq filter: OFF
+
 Phasing: Eagle v2.4
+
 Population: EUR
+
 Mode: Quality control and imputation
 
 
