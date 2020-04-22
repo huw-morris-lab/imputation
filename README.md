@@ -91,9 +91,10 @@ These are the settings I have used but you can also select other reference panel
 
 The TOPMed imputation server and reference panel has also recently been made available: https://imputation.biodatacatalyst.nhlbi.nih.gov/. I am not sure what population groups are - ALL vs. Mixed
 
-
 	Ref panel: TOPMed
 	rsq filter: OFF
 	Phasing: Eagle v2.4
 	Population: All
 	Mode: Quality control and imputation
+
+The TOPMed reference panel is in hg38 but the server automatically lifts over your data. https://imputationserver.readthedocs.io/en/latest/getting-started/#build
