@@ -82,16 +82,18 @@ Upload to the Michigan imputation server https://imputationserver.sph.umich.edu/
 
 These are the settings I have used but you can also select other reference panels etc.
 
-Ref panel: HRC r1.1 2016
-
-rsq filter: OFF
-
-Phasing: Eagle v2.4
-
-Population: EUR
-
-Mode: Quality control and imputation
+	Ref panel: HRC r1.1 2016
+	rsq filter: OFF
+	Phasing: Eagle v2.4
+	Population: EUR
+	Mode: Quality control and imputation
 
 
+The TOPMed imputation server and reference panel has also recently been made available: https://imputation.biodatacatalyst.nhlbi.nih.gov/. I am not sure what population groups are - ALL vs. Mixed
 
 
+	Ref panel: TOPMed
+	rsq filter: OFF
+	Phasing: Eagle v2.4
+	Population: All
+	Mode: Quality control and imputation
