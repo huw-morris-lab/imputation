@@ -14,6 +14,10 @@ This covers:
 2. Uploading your data onto the imputation server (Michigan or Sanger server)
 3. Post-imputation filtering
 
+Make sure you have done your QC steps first (see the snp-array-QC project).
+
+However, there is debate about how much SNP filtering to do before you before imputation. I have done all the standard QC as in the snp-array-QC repository, but there are papers which suggest that including more SNPs is better for imputation quality: https://www.ncbi.nlm.nih.gov/pubmed/25112433
+
 
 # 1. Michigan
 
@@ -79,13 +83,9 @@ Upload to the Michigan imputation server https://imputationserver.sph.umich.edu/
 These are the settings I have used but you can also select other reference panels etc.
 
 Ref panel: HRC r1.1 2016
-
 rsq filter: OFF
-
 Phasing: Eagle v2.4
-
 Population: EUR
-
 Mode: Quality control and imputation
 
 
