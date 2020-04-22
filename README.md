@@ -71,7 +71,7 @@ sh
 for chr in {1..23}
 do
 	FILENAME$chr.vcf | bgzip -c > preimpute_FILENAME$chr.vcf.gz
-	done
+done
 ```
 
 
