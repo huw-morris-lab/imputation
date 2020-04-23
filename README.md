@@ -136,10 +136,10 @@ nohup sh script.sh &
 Or use the HPC on kronos.
 
 
-The next step is to use plink to convert VCF format into binary files. Optional lines have been commented out.
+The next step is to use plink to convert VCF format into binary files. Optional lines have been commented out. --double-id means that both family and within-family IDs to be set to the sample ID
 ```
 plink --vcf new_allchromosomes.converted.R2_0.3.vcf.gz \
---double-id \ # both family and within-family IDs to be set to the sample ID
+--double-id \
 --allow-extra-chr 0 \
 --maf 0.01 \
 --make-bed \
