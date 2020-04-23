@@ -142,7 +142,8 @@ plink --vcf new_allchromosomes.converted.R2_0.3.vcf.gz \
 --double-id \ # both family and within-family IDs to be set to the sample ID
 --allow-extra-chr 0 \
 --maf 0.01 \
---make-bed --out new_allchromosomes.converted.R2_0.3.MAF_0.01
+--make-bed \
+--out new_allchromosomes.converted.R2_0.3.MAF_0.01
 
 #You can also include these other flags - depends on what you want to do
 --vcf-min-GP 0.9 \ # If you want to filter by minimum posterior probability
