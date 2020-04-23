@@ -74,7 +74,7 @@ Now create sorted vcf.gz file (loop over all chromosomes). I renamed the final f
 sh
 for chr in {1..23}
 do
-	FILENAME$chr.vcf | bgzip -c > preimpute_FILENAME$chr.vcf.gz
+	vcf-sort FILENAME$chr.vcf | bgzip -c > preimpute_FILENAME$chr.vcf.gz
 done
 ```
 
