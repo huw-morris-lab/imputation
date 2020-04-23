@@ -121,11 +121,15 @@ This will unzip your zip folders and leave you with .dose.vcf.gz and .info.gz fo
 Now we use bcftools to combine all the separate chromosome files and filter by imputation quality. Adjust your cutoff R2 as needed - 0.8 is quite a high threshold, GWAS studies usually use 0.3.
 
 ```
-bcftools concat chr1.dose.vcf.gz chr2.dose.vcf.gz chr3.dose.vcf.gz chr4.dose.vcf.gz chr5.dose.vcf.gz chr6.dose.vcf.gz chr7.dose.vcf.gz chr8.dose.vcf.gz chr9.dose.vcf.gz chr10.dose.vcf.gz chr11.dose.vcf.gz chr12.dose.vcf.gz chr13.dose.vcf.gz chr14.dose.vcf.gz chr15.dose.vcf.gz chr16.dose.vcf.gz chr17.dose.vcf.gz chr18.dose.vcf.gz chr19.dose.vcf.gz chr20.dose.vcf.gz chr21.dose.vcf.gz chr22.dose.vcf.gz -Ou | #this combines all the chromosomes into a single file
-bcftools view -Ou -i 'R2>0.3' | #filter by info score
-bcftools norm -Ou -m -any | #normalise indels. Split multiallelic sites into biallelic records. SNPs and indels merged into a single record
-bcftools norm -Ou -f  /data/kronos/NGS_Reference/fasta/human_g1k_v37.fasta |
+#concat combines all the chromosomes into a single file
+#view filters by info score
+#norm normalises indels. Split multiallelic sites into biallelic records. SNPs and indels merged into a single record
 #create final gzipped VCF file and annotate. Remove original SNP ID and assign new SNP ID as chrom:position:ref:alt
+
+bcftools concat chr1.dose.vcf.gz chr2.dose.vcf.gz chr3.dose.vcf.gz chr4.dose.vcf.gz chr5.dose.vcf.gz chr6.dose.vcf.gz chr7.dose.vcf.gz chr8.dose.vcf.gz chr9.dose.vcf.gz chr10.dose.vcf.gz chr11.dose.vcf.gz chr12.dose.vcf.gz chr13.dose.vcf.gz chr14.dose.vcf.gz chr15.dose.vcf.gz chr16.dose.vcf.gz chr17.dose.vcf.gz chr18.dose.vcf.gz chr19.dose.vcf.gz chr20.dose.vcf.gz chr21.dose.vcf.gz chr22.dose.vcf.gz -Ou | 
+bcftools view -Ou -i 'R2>0.3' |
+bcftools norm -Ou -m -any |
+bcftools norm -Ou -f  /data/kronos/NGS_Reference/fasta/human_g1k_v37.fasta |
 bcftools annotate -Oz -x ID -I +'%CHROM:%POS:%REF:%ALT' -o new_allchromosomes.converted.R2_0.3.vcf.gz
 ```
 
