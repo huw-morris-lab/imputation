@@ -150,8 +150,11 @@ plink --vcf new_allchromosomes.converted.R2_0.3.vcf.gz \
 --out new_allchromosomes.converted.R2_0.3.MAF_0.01
 
 #You can also include these other flags - depends on what you want to do
---vcf-min-GP 0.9 \ # If you want to filter by minimum posterior probability
---vcf-idspace-to _ \ # If you have any spaces in your IDs, it converts to _ because plink does not allow spaces in IDs
+# If you want to filter by minimum posterior probability
+--vcf-min-GP 0.9 \ 
+
+# If you have any spaces in your IDs, it converts to _ because plink does not allow spaces in IDs
+--vcf-idspace-to _ \ 
 ```
 
 
