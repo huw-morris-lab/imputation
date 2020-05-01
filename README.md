@@ -1,5 +1,5 @@
 # imputation
-Imputation steps using the Michigan or Sanger imputation server.
+Imputation steps using the Michigan or TOPMed imputation server.
 
 Date: April 2020
 
