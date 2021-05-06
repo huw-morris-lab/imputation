@@ -110,7 +110,7 @@ Read about bcftools http://samtools.github.io/bcftools/bcftools.html.
 Files are downloaded in zip format and you need to use the password you were emailed to unzip these.
 ```
 sh
-for chr in {1..23}
+for chr in $(seq 1 22)
 do
 	unzip -P "yourpassword" chr_$chr.zip
 done
